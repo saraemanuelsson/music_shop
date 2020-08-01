@@ -11,7 +11,7 @@ public class GuitarStringTest {
 
     @Before
     public void before(){
-        guitarString = new GuitarString(4.00, GuitarStringMaterial.BRASSANDBRONZE);
+        guitarString = new GuitarString(GuitarStringMaterial.BRASSANDBRONZE, 9);
     }
 
     @Test
@@ -38,7 +38,7 @@ public class GuitarStringTest {
 
     @Test
     public void getRetailPrice() {
-        assertEquals(4.00, guitarString.getRetailPrice(), 0.01);
+        assertEquals(5.00, guitarString.getRetailPrice(), 0.01);
     }
 
     @Test
@@ -49,6 +49,17 @@ public class GuitarStringTest {
 
     @Test
     public void calculateMarkup() {
-        assertEquals(3.00, guitarString.calculateMarkup(), 0.01);
+        assertEquals(2.00, guitarString.calculateMarkup(), 0.01);
+    }
+
+    @Test
+    public void getThickness() {
+        assertEquals(9, guitarString.getThickness());
+    }
+
+    @Test
+    public void setThickness() {
+        guitarString.setThickness(12);
+        assertEquals(12, guitarString.getThickness());
     }
 }
