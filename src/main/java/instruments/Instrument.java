@@ -5,11 +5,15 @@ import items.Item;
 
 public abstract class Instrument extends Item implements IPlay {
 
-    protected Enum type;
+    protected InstrumentType type;
 
-    public Instrument(double price, double retailPrice, Enum type) {
+    public Instrument(double price, double retailPrice, InstrumentType type) {
         super(price, retailPrice);
         this.type = type;
+    }
+
+    public InstrumentType getType() {
+        return this.type;
     }
 
 }

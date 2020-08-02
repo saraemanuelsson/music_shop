@@ -11,7 +11,7 @@ public class TrumpetTest {
 
     @Before
     public void before() {
-        trumpet = new Trumpet(40.00, 32.00, 3);
+        trumpet = new Trumpet(40.00,32.00);
     }
 
     @Test
@@ -50,5 +50,5 @@ public class TrumpetTest {
     public void numberOfVales() {
         assertEquals(3, trumpet.getNumberOfValves());
     }
-    
+
 }
