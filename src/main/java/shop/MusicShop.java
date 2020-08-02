@@ -68,5 +68,11 @@ public class MusicShop {
         return this.stock.size();
     }
 
-
+    public double calculatePotentialProfit() {
+        double potentialProfit = 0;
+        for (ISell item : this.stock) {
+            potentialProfit += item.calculateMarkup();
+        }
+        return potentialProfit;
+    }
 }
